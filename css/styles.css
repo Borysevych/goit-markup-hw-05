@@ -10,6 +10,8 @@
     --second-text-color: #757575;
     --activ-color: #2196F3;
     --white-color:#FFFFFF;
+    --time: 250ms;
+    --time-funktion: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 body{
@@ -64,7 +66,7 @@ img{
 .menu-nav-icons{
     margin-right: 10px;
     fill: var(--second-text-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--time) var(--time-funktion);
 }
 
 .menu-nav-icons:hover,
@@ -99,7 +101,7 @@ img{
 
 .link{
     color: var(--main-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time) var(--time-funktion);
 }
 
 .current-site{
@@ -119,7 +121,7 @@ img{
 
 .contacts-link{
     color: var(--second-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time) var(--time-funktion);
 }
 
 .link:hover,
@@ -200,7 +202,7 @@ color: var(--activ-color);
     cursor: pointer;
     border-style: none;
     border-radius: 4px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--time) var(--time-funktion);
 }
 
 .hero-button:hover{
@@ -347,7 +349,7 @@ color: var(--activ-color);
     height: 44px;
     fill: #AFB1B8;
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    transition: background-color var(--time) var(--time-funktion), fill var(--time) var(--time-funktion);
 }
 
 .socials-link:hover,
@@ -377,7 +379,7 @@ color: var(--activ-color);
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border var(--time) var(--time-funktion);
 }
 
 .clients-item:hover,
@@ -388,7 +390,7 @@ color: var(--activ-color);
 
 .clients-icons{
     fill: #AFB1B8;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--time) var(--time-funktion);
 }
 
 .clients-item:hover .clients-icons,
@@ -419,7 +421,7 @@ color: var(--activ-color);
     color: var(--white-color);
     font-style: normal;
     line-height: 1.71;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time) var(--time-funktion);
 }
 
 .f-right{
@@ -456,7 +458,7 @@ color: var(--activ-color);
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     line-height: 1.71;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time) var(--time-funktion);
 }
 
 .filter-list{
@@ -480,7 +482,7 @@ color: var(--activ-color);
     text-align: center;
     cursor: pointer;
     border-radius: 4px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--time) var(--time-funktion), color var(--time) var(--time-funktion), box-shadow var(--time) var(--time-funktion);
 }
 
 .filter:hover,
@@ -498,7 +500,7 @@ color: var(--activ-color);
 
 .example-link{
     display: block;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--time) var(--time-funktion);
 }
 
 .example-link:hover,
@@ -511,6 +513,32 @@ color: var(--activ-color);
     border-left: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
+}
+
+.overlay{
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-text{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--white-color);
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(101%);
+    transition: transform var(--time) var(--time-funktion);
+}
+
+.example-link:hover .overlay-text{
+    transform: translateY(0);
 }
 
 .example-item{
