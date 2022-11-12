@@ -579,7 +579,7 @@ overflow: hidden;
 
     background-color: rgba(0, 0, 0, 0.2);
     
-    transition: visibility 300ms linear, opacity 300ms linear;
+    transition: visibility 300ms var(--time-funktion), opacity 300ms var(--time-funktion);
 }
 
 .backdrop.is-hidden {
@@ -601,7 +601,7 @@ overflow: hidden;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transition: transform 300ms linear;
+    transition: transform 300ms var(--time-funktion);
 }
 
 .backdrop.is-hidden .modal{
